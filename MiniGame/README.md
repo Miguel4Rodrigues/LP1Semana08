@@ -1,10 +1,10 @@
 ```mermaid
 classDiagram
     
-    class Character {
-        - weapon : Weapon
-        + name : string
-        + Fight() : void
-    }
+class Character {
+    - weapon : Weapon
+    + name : string
+    + Fight() : void
+}        
 
 ```
