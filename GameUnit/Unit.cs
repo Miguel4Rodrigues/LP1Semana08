@@ -1,14 +1,25 @@
+using System;
+
 namespace GameUnit
 {
-    public class Unit
+    public abstract class Unit
     {
-        private readonly int movement;
-        public int Health { get; set; }
-
+        public int Movement { get; set;}
+        public virtual int Health { get; set; }
+        public  abstract float Cost { get; }
         public Unit(int movement, int health)
         {
-            this.movement = movement;
+            Movement = movement;
             Health = health;
         }
+        public void Move()
+        {
+            Console.WriteLine($"Moved: {ToRoman(Movement)}");
+        }
+        private string ToRoman(int number)
+        {
+            string[] roman = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X" };
+            return roman[number - 1];
+        }        
     }
 }

@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ClassAction/ClassAction.csproj" />
+  <Project Path="ClassVsStruct/ClassVsStruct.csproj" />
   <Project Path="GameUnit/GameUnit.csproj" />
   <Project Path="MiniGame/MiniGame.csproj" />
 </Solution>
