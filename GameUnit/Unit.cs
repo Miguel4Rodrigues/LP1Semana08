@@ -20,6 +20,14 @@ namespace GameUnit
         {
             string[] roman = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X" };
             return roman[number - 1];
-        }        
+        }
+
+        public override string ToString()
+        {
+            // GetType().Name vai dar "SettlerUnit" ou "MilitaryUnit" dependendo do objeto real.
+            // Cost:F2 garante que o float seja impresso com duas casas decimais (ex: 5.00).
+            return $"{GetType().Name}: HP = {Health} COST = {Cost:F2}";
+        }
+
     }
 }

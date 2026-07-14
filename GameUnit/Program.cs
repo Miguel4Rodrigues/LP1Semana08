@@ -27,11 +27,13 @@ namespace GameUnit
             Console.WriteLine();
 
             // ==========================================
-            // TESTE 2: Imprimir Health e Cost de cada uma
+            // TESTE 2: Imprimir usando o teu novo ToString()
             // ==========================================
-            Console.WriteLine(">> Testando os Atributos Iniciais:");
-            Console.WriteLine($"[Settler] Vida: {settler.Health} | Custo: {settler.Cost}");
-            Console.WriteLine($"[Soldier] vida: {soldier.Health} | Custo: {soldier.Cost}");
+            Console.WriteLine(">> Testando os Atributos Iniciais (com ToString):");
+            
+            // Passar o objeto diretamente faz o C# chamar o teu ToString() automaticamente!
+            Console.WriteLine(settler); 
+            Console.WriteLine(soldier); 
 
             Console.WriteLine();
 
@@ -41,11 +43,11 @@ namespace GameUnit
             Console.WriteLine(">> O Soldier ataca o Settler! (Dano = 10)");
             soldier.Attack(settler); // Soldier ganha +1 XP, Settler perde 10 de vida
 
-            Console.WriteLine("\n>> Atributos após o ataque:");
-            // O Settler tinha 3 de vida, agora deve ter -7 (3 - 10)
-            Console.WriteLine($"[Settler] Nova Vida: {settler.Health}");
-            // O Soldier ganhou 1 de XP, logo o seu Cost deve ter aumentado em 1!
-            Console.WriteLine($"[Soldier] Novo XP: {soldier.XP} | Novo Custo (AttackPower + XP) {soldier.Cost}");
+            Console.WriteLine("\n>> Atributos após o ataque (com ToString):");
+            
+            // Verificamos o estado atualizado das unidades usando novamente o ToString()
+            Console.WriteLine(settler);
+            Console.WriteLine(soldier);
         }
     }
 }
